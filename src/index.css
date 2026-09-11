@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 100;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd166;
+}
+
+.explore-btn {
+    padding: 12px 23px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: white;
+    color: #111;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #ffd166;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 7%;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1544735716-392fe2489ffa");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 720px;
+
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    color: #ffd166;
+}
+
+.hero h1 {
+    margin: 0 0 25px;
+
+    font-size: 82px;
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    color: white;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ================================
+   HERO BUTTONS
+================================ */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 15px 27px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    border: none;
+
+    background: white;
+    color: #111;
+}
+
+.primary-btn:hover {
+    background: #ffd166;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .explore-btn {
+        padding: 10px 16px;
+    }
+
+    .hero {
+        padding: 100px 5%;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 100px 6%;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* ================================
+   DESTINATIONS
+================================ */
+
+.destinations {
+    width: 100%;
+    padding: 100px 7%;
+    background: #f8f8f6;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading p {
+    margin-bottom: 12px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #d49a00;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-size: 48px;
+    line-height: 1.1;
+
+    color: #171717;
+}
+
+.section-heading span {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* DESTINATION GRID */
+
+.destination-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* DESTINATION CARD */
+
+.destination-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.14);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.4s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.destination-content {
+    padding: 25px;
+}
+
+.destination-content span {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #d49a00;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.destination-content h3 {
+    margin: 10px 0;
+
+    font-size: 26px;
+
+    color: #171717;
+}
+
+.destination-content p {
+    margin-bottom: 20px;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.destination-content button {
+    border: none;
+
+    background: transparent;
+
+    color: #171717;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition: 0.3s ease;
+}
+
+.destination-content button:hover {
+    color: #d49a00;
+
+    transform: translateX(5px);
+}
+
+
+/* ================================
+   DESTINATION RESPONSIVE
+================================ */
+
+@media (max-width: 950px) {
+
+    .destination-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .destinations {
+        padding: 70px 5%;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-heading span {
+        font-size: 15px;
+    }
+}
