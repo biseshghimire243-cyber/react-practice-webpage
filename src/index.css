@@ -286,6 +286,7 @@ body {
         width: 100%;
         max-width: 250px;
     }
+<<<<<<< HEAD
 }
 
 /* ================================
@@ -474,4 +475,6 @@ body {
     .section-heading span {
         font-size: 15px;
     }
+=======
+>>>>>>> 44e5e6920068c7ab3d32fb640adba4a6279715e4
 }
