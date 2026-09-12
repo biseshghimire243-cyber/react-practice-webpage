@@ -3,7 +3,7 @@ import destinations from "../../data/destinations";
 
 function Destinations() {
     return (
-        <section className="destinations">
+        <section id="destinations" className="destinations">
 
             <div className="section-heading">
                 <p>DISCOVER NEPAL</p>
